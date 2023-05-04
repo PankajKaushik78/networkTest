@@ -11,6 +11,9 @@
 		40D404322A03BBD500D3AD5F /* test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D404272A03BBD500D3AD5F /* test.framework */; };
 		40D404372A03BBD500D3AD5F /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D404362A03BBD500D3AD5F /* testTests.swift */; };
 		40D404382A03BBD500D3AD5F /* test.h in Headers */ = {isa = PBXBuildFile; fileRef = 40D4042A2A03BBD500D3AD5F /* test.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40D404442A03BC4F00D3AD5F /* NetworkCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D404432A03BC4E00D3AD5F /* NetworkCapture.swift */; };
+		40D404472A03BD7800D3AD5F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D404462A03BD7800D3AD5F /* NetworkRequest.swift */; };
+		40D404492A03BD8800D3AD5F /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D404482A03BD8800D3AD5F /* NetworkResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		40D4042B2A03BBD500D3AD5F /* test.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = test.docc; sourceTree = "<group>"; };
 		40D404312A03BBD500D3AD5F /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D404362A03BBD500D3AD5F /* testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTests.swift; sourceTree = "<group>"; };
+		40D404432A03BC4E00D3AD5F /* NetworkCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCapture.swift; sourceTree = "<group>"; };
+		40D404462A03BD7800D3AD5F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		40D404482A03BD8800D3AD5F /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		40D4041D2A03BBD500D3AD5F = {
 			isa = PBXGroup;
 			children = (
+				40D404412A03BC2600D3AD5F /* Sources */,
 				40D404292A03BBD500D3AD5F /* test */,
 				40D404352A03BBD500D3AD5F /* testTests */,
 				40D404282A03BBD500D3AD5F /* Products */,
@@ -83,6 +90,32 @@
 				40D404362A03BBD500D3AD5F /* testTests.swift */,
 			);
 			path = testTests;
+			sourceTree = "<group>";
+		};
+		40D404412A03BC2600D3AD5F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				40D404422A03BC3300D3AD5F /* NetworkCapture */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		40D404422A03BC3300D3AD5F /* NetworkCapture */ = {
+			isa = PBXGroup;
+			children = (
+				40D404452A03BD6700D3AD5F /* models */,
+				40D404432A03BC4E00D3AD5F /* NetworkCapture.swift */,
+			);
+			path = NetworkCapture;
+			sourceTree = "<group>";
+		};
+		40D404452A03BD6700D3AD5F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				40D404462A03BD7800D3AD5F /* NetworkRequest.swift */,
+				40D404482A03BD8800D3AD5F /* NetworkResponse.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				40D4042C2A03BBD500D3AD5F /* test.docc in Sources */,
+				40D404492A03BD8800D3AD5F /* NetworkResponse.swift in Sources */,
+				40D404472A03BD7800D3AD5F /* NetworkRequest.swift in Sources */,
+				40D404442A03BC4F00D3AD5F /* NetworkCapture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -249,6 +286,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -284,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -312,6 +351,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -328,6 +368,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -396,6 +437,7 @@
 		40D4043F2A03BBD500D3AD5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76RB58J4TP;
@@ -412,6 +454,7 @@
 		40D404402A03BBD500D3AD5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 76RB58J4TP;
